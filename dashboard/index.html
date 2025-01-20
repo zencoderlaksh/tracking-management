@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/dashboard.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="greeting"></h1>
+    <button id="trackAnotherUser" onclick="redirectToLogin()">Track for Another User</button>
+    </header>
+    <section>
+        <h2>Search Saved Tracking IDs</h2>
+        <input type="text" id="searchInput" placeholder="Search by Tracking ID or Status" oninput="searchTrackingIds()">
+        <ul id="searchResults"></ul>
+    </section>
+    <section>
+        <h2>Track a Courier</h2>
+        <input type="text" id="trackingId" placeholder="Enter Tracking ID">
+        <button onclick="trackOrder()">Track</button>
+        <div id="trackingResult"></div>
+    </section>
+    
+<section>
+    <h2>Saved Tracking IDs</h2>
+    <ul id="savedTrackingList"></ul>
+</section>
+
+    
+    <section>
+        <h2>Delivery History</h2>
+        <ul id="deliveryHistory"></ul>
+    </section>
+    <section>
+        <h2>Delivery Progress</h2>
+        <div id="progressContainer"
+            style="background: #eee; border-radius: 5px; width: 100%; height: 20px; margin-top: 10px; position: relative;">
+            <div id="progressBar" style="background: #4caf50; height: 100%; width: 0%; border-radius: 5px;"></div>
+        </div>
+        <p id="progressText" style="margin-top: 5px;">0% - No Status</p>
+    </section>
+    <section>
+        <h2>Theme</h2>
+        <button id="themeToggle" onclick="toggleDarkMode()">Switch to Dark Mode</button>
+    </section>
+
+    <script src="../scripts/dashboard.js"></script>
+    <script src="../scripts/features.js"></script>
+</body>
+</html>

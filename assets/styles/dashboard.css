@@ -1,0 +1,204 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+section {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Inputs and Buttons */
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1d6fa5;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    background: #f4f4f4;
+    margin: 5px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+ul li button {
+    background-color: #e74c3c;
+    padding: 5px 10px;
+}
+
+ul li button:hover {
+    background-color: #c0392b;
+}
+
+/* Delivery Progress Bar */
+#progressContainer {
+    margin-top: 20px;
+    width: 100%;
+    height: 20px;
+    background: #ececec;
+    border-radius: 10px;
+    position: relative;
+}
+
+#progressBar {
+    height: 100%;
+    background: #4caf50;
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+
+#progressText {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Theme Section */
+#themeToggle {
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+    text-align: center;
+}
+
+/* Search Results */
+#searchResults li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+#searchResults li:hover {
+    transform: scale(1.02);
+    background: #f1f1f1;
+}
+
+/* Delivery History */
+#deliveryHistory li {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    margin: 5px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: box-shadow 0.2s;
+}
+
+#deliveryHistory li:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Track for another user css */
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #eee;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+#trackAnotherUser {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#trackAnotherUser:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    section {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    input[type="text"] {
+        font-size: 0.9rem;
+    }
+}
