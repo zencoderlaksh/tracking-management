@@ -1,4 +1,4 @@
-// Mock data for tracking information
+// Dummy data for tracking information
 const trackingData = {
   12345: { status: "In Transit", location: "New York", estimate: "2025-01-25" },
   67890: {
@@ -13,7 +13,7 @@ const trackingData = {
   },
 };
 
-// Load user info and greet them
+// Load user info and show their details
 document.addEventListener("DOMContentLoaded", () => {
   const user = JSON.parse(localStorage.getItem("user"));
   if (user) {
@@ -35,7 +35,7 @@ function updateProgressBar(status) {
   const progressBar = document.getElementById("progressBar");
   const progressText = document.getElementById("progressText");
 
-  // Map statuses to progress percentages
+  //Progess bar inside updates
   const statusProgress = {
     Shipped: 25,
     "In Transit": 50,
@@ -49,10 +49,10 @@ function updateProgressBar(status) {
 }
 
 function trackOrder() {
-  const trackingId = document.getElementById("trackingId").value.trim(); // Trim whitespace
+  const trackingId = document.getElementById("trackingId").value.trim();
   const resultDiv = document.getElementById("trackingResult");
 
-  // Error: Empty Tracking ID
+  // Error: Empty Tracking ID not found then
   if (!trackingId) {
     resultDiv.innerHTML = `<p style="color: red;">Please enter a valid Tracking ID.</p>`;
     return;
@@ -60,7 +60,7 @@ function trackOrder() {
 
   const savedIds = JSON.parse(localStorage.getItem("savedTrackingIds")) || [];
 
-  // Error: Duplicate Tracking ID
+  // Error: Duplicate Tracking ID if found already tracked one
   if (savedIds.includes(trackingId)) {
     resultDiv.innerHTML = `<p style="color: red;">This Tracking ID is already being tracked.</p>`;
     return;
@@ -120,7 +120,7 @@ function loadDeliveryHistory() {
   });
 }
 
-// Function to search saved tracking IDs
+// Function to search saved tracking IDs (Search Bar)
 function searchTrackingIds() {
   const query = document
     .getElementById("searchInput")
